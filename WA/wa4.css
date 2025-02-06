@@ -1,0 +1,149 @@
+/* General styles - put these straight into your stylesheet */
+
+body {
+    margin: 0;
+  }
+  
+  html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+  }
+  
+  /* Selectors to be matched up with rulesets */
+/*   
+  .card article img
+  .card footer
+  .card header
+  .card */
+  /* .card header, .card footer
+  .card h2, p */
+  
+  /* Rulesets to be matched up with selectors */
+  
+   .chriscard {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: red;
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+  }
+  
+  .chriscard header {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+  }
+  
+  .chriscard footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+  }
+  
+  .chriscard article img {
+    max-height: 100%;
+    float: right;
+  }
+
+  .chriscard header, .chriscard footer {
+    height: 3em;
+    padding: 1em;
+  }
+
+  .chriscard h2, .chriscard p {
+    margin: 0;
+  }
+
+  .chriscard article {
+    height: 12em;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p footer{
+    font-size: 1.5em;
+    color: black
+  }
+
+  #chrisfooter {
+    text-align: center;
+    font-family: Arial;
+  }
+
+  #chrisfooter p{
+    color: black
+  }
+
+  p{
+    padding: 1em;
+    color: white;
+    line-height: 1.4;
+  }
+
+  /* this is my section */
+  .averycard {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: yellow;
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+  }
+  
+  .averycard header {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+    font-family: 'Courier New';
+  }
+  
+  .averycard footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+  }
+  
+  .averycard article img {
+    max-height: 100%;
+    float: right;
+  }
+
+  .averycard header, .chriscard footer {
+    height: 3em;
+    padding: 1em;
+  }
+
+  .averycard h2, .averycard p {
+    margin: 0;
+  }
+
+  .averycard article {
+    height: 12em;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p footer{
+    font-size: 1.5em;
+    color: black
+  }
+
+  #averyfooter {
+    text-align: center;
+    font-family: Courier;
+  }
+
+  #averyfooter p{
+    color: black
+  }
+
+  p{
+    padding: 1em;
+    color: white;
+    line-height: 1.4;
+  }
+
