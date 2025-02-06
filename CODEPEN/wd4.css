@@ -1,0 +1,100 @@
+body {
+	align-items: center;
+	background: #b0b1c0;
+	block-size: 100dvh;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	inline-size: 100dvi;
+	justify-content: center;
+}
+
+svg {
+	inline-size: min(90dvi, 180px);
+	path {
+		mix-blend-mode: soft-light;
+	}
+}
+
+.logo-def {
+	display: none;
+}
+
+.step-glitch {
+	.logo-c {
+		animation: 3s c steps(2, jump-end) infinite;
+		fill: rgb(255, 0, 225);
+		x: 1;
+		y: 0;
+	}
+
+	.logo-m {
+		animation: 5s m steps(2, jump-end) infinite;
+		fill: rgb(0, 255, 89);
+		x: 0;
+		y: 1;
+	}
+
+	.logo-y {
+		animation: .5s y steps(2, jump-end) infinite;
+		fill: rgb(21, 0, 255);
+		x: 1;
+		y: 2;
+	}
+}
+
+.drift-glitch {
+	.logo-c {
+		animation: 3s c linear infinite alternate;
+		fill: rgb(255, 0, 225);
+		x: 1;
+		y: 0;
+	}
+
+	.logo-m {
+		animation: 5s m linear infinite alternate;
+		fill: rgb(0, 255, 89);
+		x: 0;
+		y: 1;
+	}
+
+	.logo-y {
+		animation: 2.5s y linear infinite alternate;
+		fill: rgb(21, 0, 255);
+		x: 1;
+		y: 2;
+	}
+}
+
+@keyframes c {
+	83.33% {
+		x: 1;
+		y: 0;
+	}
+	100% {
+		x: 0;
+		y: 0;
+	}
+}
+
+@keyframes m {
+	80% {
+		x: 0;
+		y: 1;
+	}
+	100% {
+		x: 1;
+		y: 2;
+	}
+}
+
+@keyframes y {
+	90% {
+		x: 1;
+		y: 2;
+	}
+	100% {
+		x: 0;
+		y: 1;
+	}
+}
