@@ -4,7 +4,7 @@
     font-size: 200%;
     position: absolute;
     left: 57%;
-    top: 110%;
+    top: 5%;
     z-index: 2;
     color: white;
     text-align: center;
@@ -15,7 +15,7 @@
     font-size: 200%;
     position: absolute;
     left: 37%;
-    top: 110%;
+    top: 5%;
     z-index: 2;
     color: white;
     text-align: center;
@@ -35,7 +35,7 @@
     position: absolute;
     z-index: 1;
     width: .25%;
-    top: 40em;
+    top: 2%;
     left: 35%;
 }
 
@@ -43,7 +43,7 @@
     position: absolute;
     z-index: 1;
     width: .25%;
-    top: 49.5em;
+    top: 0em;
     left: 45%;
 }
 
@@ -51,6 +51,6 @@
     position: absolute;
     z-index: 1;
     width: .25%;
-    top: 0em;
-    left: 12%;
+    top: 100%;
+    left: 15%;
 }
