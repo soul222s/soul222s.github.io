@@ -11,8 +11,8 @@ body {
 
 body {
   display: grid;
-  place-items: center right;
-  place-content: center right;
+  place-items: center;
+  place-content: center;
   font-family: system-ui, monospace;
   gap: 2rem;
   background-color: var(--color-bg);
