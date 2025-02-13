@@ -1,0 +1,56 @@
+
+.Fluff {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 200%;
+    position: absolute;
+    left: 57%;
+    top: 110%;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.Ruff {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 200%;
+    position: absolute;
+    left: 37%;
+    top: 110%;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.BGimg {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#bluebox {
+    position: absolute;
+    z-index: 1;
+    width: .25%;
+    top: 50em;
+    left: 35%;
+}
+
+#pblogo {
+    position: absolute;
+    z-index: 1;
+    width: .25%;
+    top: 49.5em;
+    left: 45%;
+}
+
+#pbbanner {
+    position: absolute;
+    z-index: 1;
+    width: .25%;
+    top: 0em;
+    left: 12%;
+}
