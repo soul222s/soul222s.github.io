@@ -1,0 +1,93 @@
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  }
+
+  img {
+      max-width: 100%;
+      display: block;
+  }
+  
+  .logo {
+    font-size: 200%;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 980px;
+  }
+  
+  .grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+    display: flex;
+    overflow: visible;
+  }
+  
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    padding: .5em;
+    align-items: center;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1em;
+  }
+  
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 1px;
+  }
+
+  .feature {
+      width: 200px;
+      float: left;
+      padding: 10px;
+  }
+
+@media screen and (max-width: 500px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        float: left;
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+ /* I've tried so hard to get the navbar to be sticky when less than 500px but it's not working no matter what I do */
+}
