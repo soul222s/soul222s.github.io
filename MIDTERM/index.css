@@ -1,0 +1,104 @@
+body{
+    background-color: #DFC191;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0%;
+    margin: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: #DFC191;
+    
+}
+
+
+#navBar{
+    background-color: #432818;
+    height: 10vh;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    margin: 0px;
+    box-sizing: border-box;
+    align-items: center;
+    order: 1;
+    h1 {
+        text-align: center;
+        font-style: italic;
+        font-size: 50px;
+        position: relative;
+        bottom: 25px;
+    }
+    z-index: 2;
+}
+
+#photobar {
+    background-color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.533), rgba(0, 0, 0, 0.533)),url("/IMG/cso.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    aspect-ratio: 16/9;
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    box-sizing: border-box;
+    h1{
+        text-align: center;
+        font-style: italic;
+        font-size: 35px;
+        position: relative;
+        top: 500px;
+        color: rgb(255, 255, 255);
+    }
+    order: 2;
+}
+
+/* #clickshows {
+    background-color: #813C25;
+    color: white;
+    top:250px;
+    text-align: center;
+    height: 10vh;
+    width: 100px;
+    align-items: center;
+} */
+
+button{
+    background-color: #813C25; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  order: 2;
+  z-index: 2;
+  position: relative;
+}
+
+#about {
+    background-color: white;
+    margin: 0%;
+    padding: 0%;
+    height: 20vh;
+    width: 100vw;
+    box-sizing: border-box;
+    h1{
+        color: #813C25;
+        text-align: center;
+        top: 20px;
+        font-size: 25px;
+        font-style: italic;
+        font-family: 'Franklin Gothic Medium';
+        
+    }
+    order: 3;
+}
+
