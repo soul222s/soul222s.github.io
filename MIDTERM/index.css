@@ -69,7 +69,7 @@ h1{
     align-items: center;
 } */
 
-button{
+/* #button{
     background-color: #813C25; 
   border: none;
   color: white;
@@ -82,6 +82,13 @@ button{
   z-index: 2;
   position: relative;
 }
+
+#clickshows {
+    top: 250px;
+    text-align: center;
+    align-items: center;
+} */
+
 
 #about {
     background-color: white;
