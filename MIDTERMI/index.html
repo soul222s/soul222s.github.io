@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="titlebar">
+      ZΩRBLAXian VOID PULSE COLLECTIVE
+    </div>
+    <div id="navbar">
+       <ul><a href="#concerts">Tickets</a></ul>
+    </div>
+    <div id="photobar">
+      <h1>Step into the unknown as the stars align for a truly out-of-this-world musical experience!</h1>
+    </div>
+    <div class="concerts">
+        <h2>Upcoming Concerts</h2>
+    
+        <div class="bar black">
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertOne')">Stellar Voyage</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertTwo')">Void Echoes</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertThree')">Galactic Chorus</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertFour')">Chronos Unbound</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertFive')">Quantum Frequencies</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertSix')">Consciousness Expansion</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertSeven')">Synaesthetic Voyage</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertEight')">Spacetime Ripples</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertNine')">Beyond the Veil</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertTen')">Thermodynamic Defiance</button>
+        </div>
+    
+        <div id="concertOne" class="container border city">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+        </div>
+    
+        <div id="concertTwo" class="container border city" style="display:none">
+          <h2>Paris</h2>
+          <p>Paris is the capital of France.</p> 
+        </div>
+    
+        <div id="concertThree" class="container border city" style="display:none">
+          <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="concertFour" class="container border city">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+        </div>
+    
+        <div id="concertFive" class="container border city" style="display:none">
+          <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="concertSix" class="container border city">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+        </div>
+    
+        <div id="concertSeven" class="container border city" style="display:none">
+          <h2>Paris</h2>
+          <p>Paris is the capital of France.</p> 
+        </div>
+    
+        <div id="concertEight" class="container border city" style="display:none">
+          <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="concertNine" class="container border city">
+          <h2>London</h2>
+          <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="concertTen" class="container border city" style="display:none">
+          <h2>Paris</h2>
+          <p>Paris is the capital of France.</p> 
+        </div>
+    
+      </div>
+
+      <script>
+        function openCity(evt, cityName) {
+          var i, x, tablinks;
+          x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" blue", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " blue";
+        }
+      </script>
+</body>
+</html>
