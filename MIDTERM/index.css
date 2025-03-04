@@ -1,6 +1,6 @@
 body{
-    background-color: #DFC191;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: #9DC4DF;
+    font-family: 'Courier New', Courier, monospace;
     padding: 0%;
     margin: 0px;
     box-sizing: border-box;
@@ -9,13 +9,13 @@ body{
 }
 
 h1{
-    color: #DFC191;
+    color: #9DC4DF;
     
 }
 
 
 #navBar{
-    background-color: #432818;
+    background-color: #532A5F;
     height: 10vh;
     width: 100vw;
     position: sticky;
@@ -31,6 +31,14 @@ h1{
         font-size: 50px;
         position: relative;
         bottom: 25px;
+    }
+    h2 {
+        text-align: right;
+        font-size: 25px;
+        position: relative;
+        right: 50px;
+        color: white;
+        background-color: #218A7F;
     }
     z-index: 2;
 }
@@ -54,58 +62,8 @@ h1{
         font-size: 35px;
         position: relative;
         top: 500px;
-        color: rgb(255, 255, 255);
+        color: white;
     }
     order: 2;
-}
-
-/* #clickshows {
-    background-color: #813C25;
-    color: white;
-    top:250px;
-    text-align: center;
-    height: 10vh;
-    width: 100px;
-    align-items: center;
-} */
-
-/* #button{
-    background-color: #813C25; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  order: 2;
-  z-index: 2;
-  position: relative;
-}
-
-#clickshows {
-    top: 250px;
-    text-align: center;
-    align-items: center;
-} */
-
-
-#about {
-    background-color: white;
-    margin: 0%;
-    padding: 0%;
-    height: 20vh;
-    width: 100vw;
-    box-sizing: border-box;
-    h1{
-        color: #813C25;
-        text-align: center;
-        top: 20px;
-        font-size: 25px;
-        font-style: italic;
-        font-family: 'Franklin Gothic Medium';
-        
-    }
-    order: 3;
 }
 
