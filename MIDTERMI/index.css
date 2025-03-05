@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #532A5F;
     color: #333;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
@@ -14,9 +14,11 @@ body {
     font-size: 300%;
     padding: 50px 20px;
     margin: 0 auto;
-    max-width: 980px;
+    max-width: 100%;
     order: 1;
     font-weight: bold;
+    background-color: #532A5F;
+    color: white;
   }
   
 #navbar {
@@ -77,6 +79,33 @@ body {
 .concerts {
     padding: 20px;
     order: 3;
+    background-color:white;
+  }
+
+  .concerts h1 {
+    font-family: Georgia;
+    color: #218A7F;
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .concerts h2 {
+    color: #532A5F;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .concerts h3 {
+    color: #218A7F;
+    font-size: 20px;
+    font-family: Georgia;
+  }
+  
+  .concerts p {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
   }
   
   .bar {
