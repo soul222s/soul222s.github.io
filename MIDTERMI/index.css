@@ -31,7 +31,7 @@ body {
       text-decoration: underline;
       color: #218A7F;
     }
-  }
+}
 
 
   
@@ -63,7 +63,7 @@ body {
 
   #photobar {
     background-color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.718), rgba(0, 0, 0, 0.718)),url("/IMG/aliens.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.366), rgba(0, 0, 0, 0.366)),url("/IMG/aliens.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -89,7 +89,7 @@ body {
         width: 100vw;
         padding: 20px;
     }
-    order: 2;
+  order: 2;
 }
 
 #concertlist{
@@ -137,8 +137,11 @@ body {
   .concerts p {
     color: black;
     font-size: 17px;
-    font-weight: bold;
     line-height: 150%;
+  }
+
+  .concerts p::first-line{
+    font-weight: bold;
   }
   
   .bar {
@@ -191,4 +194,13 @@ body {
  .bar {
   flex-direction: column;
  }
+.concerts h2{
+  font-size: 25px;
+}
+.concerts h1{
+  font-size: 15px;
+}
+#titlebar{
+  text-align: center;
+}
 }
