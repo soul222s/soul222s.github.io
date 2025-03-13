@@ -2,7 +2,7 @@ body {
     background-color: #000000;
     color: #000000;
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
     padding: 0%;
     margin: 0px;
     box-sizing: border-box;
@@ -14,14 +14,21 @@ body {
     scroll-behavior: smooth;
   }
 
+  .saira-stencil-one-regular {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 #titlebar {
     font-size: 200%;
     padding: 25px 10px;
     margin: 0 auto;
     max-width: 100%;
-    order: 1;
+    order: 4;
     font-style: italic;
-    background-color: #000000;
+    font-weight: bold;
     color: #d2ecff;
     a{
       text-decoration: none;
@@ -33,16 +40,29 @@ body {
     }
 }
 
+#tagline {
+  order: 2;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  h1{
+    color: #d2ecff;
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+  }
+}
+
 
   
 #navbar {
     position: sticky;
     top: 0;
     background-color: #532A5F;
-    padding: 1.5em;
+    padding: 1em;
     align-items: center;
     z-index: 2;
-    font-size: 150%;
+    font-size: 200%;
+    font-weight: bold;
   }
   
 #navbar ul {
@@ -63,12 +83,12 @@ body {
 
   #photobar {
     background-color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.366), rgba(0, 0, 0, 0.366)),url("/IMG/aliens.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.366), rgba(0, 0, 0, 0.366)),url("/IMG/zaliens.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 80vh;
-    width: 100vw;
+    width: 99vw;
     padding: 0px;
     margin: 0px;
     top: 0px;
@@ -77,6 +97,7 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center; 
+    order: 3;
     h1{
         text-align: center;
         font-style: italic;
@@ -89,20 +110,19 @@ body {
         width: 100vw;
         padding: 20px;
     }
-  order: 2;
 }
 
 #concertlist{
-  order: 4;
+  order: 2;
 }
 .concerts {
     padding: 20px;
-    order: 3;
+    order: 2;
     background-color:#d2ecff;
   }
 
   .concerts h1 {
-    font-family: Georgia;
+    font-family: 'Verdana';
     color: #218A7F;
     font-size: 25px;
     text-align: center;
@@ -118,7 +138,7 @@ body {
   .concerts h3 {
     color: #218A7F;
     font-size: 20px;
-    font-family: Georgia;
+    font-family: 'Verdana';
     text-align: center;
   }
 
@@ -130,18 +150,22 @@ body {
 
   .concerts h5 {
     color: #532A5F;
-    font-size: 17px;
+    font-size: 25px;
     text-align: center;
   }
   
   .concerts p {
     color: black;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 150%;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
   }
 
   .concerts p::first-line{
     font-weight: bold;
+    font-size: 25px;
   }
   
   .bar {
@@ -168,6 +192,7 @@ body {
   .button:hover {
     background-color: #218A7F; 
     color: rgb(255, 255, 255);
+    transition: .5s;
   }
   
   .cyan {

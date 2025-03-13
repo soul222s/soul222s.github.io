@@ -14,15 +14,15 @@
        <ul>ZΩRBLAXian VOID PULSE COLLECTIVE</a></ul>
     </div>
     <div id="photobar">
-      <h1>Step into the unknown as the stars align for a truly out-of-this-world musical experience!</h1>
     </div>
+    <div id="tagline"><h1>Step into the unknown as the stars align for a truly out-of-this-world musical experience!</h1></div>
 
   <div id="concertlist">
     <div class="concerts">
         <h4>Upcoming Concerts</h4>
     
         <div class="bar black">
-          <button class="bar-item button tablink" onclick="openCity(event, 'concertOne')">Stellar Voyage</button>
+          <button class="bar-item button tablink" onclick="openCity(event, 'concertOne')" id="defaultOpen">Stellar Voyage</button>
           <button class="bar-item button tablink" onclick="openCity(event, 'concertTwo')">Void Echoes</button>
           <button class="bar-item button tablink" onclick="openCity(event, 'concertThree')">Galactic Chorus</button>
           <button class="bar-item button tablink" onclick="openCity(event, 'concertFour')">Chronos Unbound</button>
@@ -34,7 +34,7 @@
           <button class="bar-item button tablink" onclick="openCity(event, 'concertTen')">Thermodynamic Defiance</button>
         </div>
     
-        <div id="concertOne" class="container border city">
+        <div id="concertOne" class="container border city" >
           <h2>COSMIC SENSORY CONVERGENCE: STELLAR VOYAGE</h2>
           <h1>Stardate 2025.108-109 | Harmonic Alignment: 22:00<br>
             Conductor: Multi-Dimensional Maestro ZEROX-9<br></h1>
@@ -178,6 +178,7 @@
           document.getElementById(cityName).style.display = "block";
           evt.currentTarget.className += " blue";
         }
+        document.getElementById("defaultOpen").click();
       </script>
 </body>
 </html>
