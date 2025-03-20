@@ -1,0 +1,43 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    width: 700px;
+    background-color: palegoldenrod;
+    color: brown;
+    font-weight: bold;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  div {
+    padding-bottom: 20px;
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    width: 150px;
+  }
+
+  p {
+    background: #ffc125;
+    color: #5e2612;
+    padding: 10px;
+    visibility: hidden;
+  }
+
+  button{
+    background-color: orangered;
+    color: white;
+    border-color: yellow;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 20px;
+  }
+
+  button:hover{
+    background-color: yellow;
+    color: orangered;
+    border-color: brown;
+    transition: .5s;
+  }
