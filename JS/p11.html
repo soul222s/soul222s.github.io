@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice!</title>
+</head>
+<body>
+    <h1 class="heading">Hello!</h1>
+    <script>
+        //var(a let more or less), let (malleable variable), const(will NOT change) are variables
+        // const header = document.querySelector('h1');
+        const header = document.querySelector('heading');
+            //query selector is a broad grabber to grab elements
+            // other ways to do it like const head = document.get
+        header.addEventListener('click', changeColor);
+        // header.addEventListener ('click', function (color));
+
+        // }
+
+        function changeColor(color) {
+            // header.textContent = color;
+            header.textContent = 'How are you?';
+        }
+
+        //anon functions don't have names, exist for a moment 
+        var x = 0;
+        for (let i = 0; i <10; i++) {
+           
+         if (x == 2) {
+             console.log ("X IS 2");
+             x = 0;
+         }
+         else if (x == 0) {
+            console.log ("X IS 0");
+            x = 1;
+         }
+         else {
+            console.log("X IS 1");
+            x = 2;
+         }
+        }
+
+        let y = 10;
+        while (y>0) {
+            console.log(y);
+            y-=1;
+        }
+        console.log("THE LOOP IS DONE");
+
+
+    </script>
+</body>
+</html>
