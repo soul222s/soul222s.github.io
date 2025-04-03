@@ -1,0 +1,71 @@
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+body {
+  width: 640px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightyellow;
+  color: darkorange;
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 640px;
+  width: 100%;
+}
+.displayed-img {
+  width: 640px;
+  height: 480px;
+  object-fit: contain;
+}
+.full-img {
+  position: relative;
+  display: block;
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+  background-color: rgba(84, 49, 0, 0);
+}
+button {
+  border: 0;
+  background: rgba(243, 214, 50, 0.6);
+  text-shadow: 1px 1px 1px orange;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+.thumb-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: 100%;
+}
+.thumb-bar img {
+  display: block;
+  width: calc(100% / 5 - 10px);
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.thumb-bar img:hover {
+  border: 2px solid orangered;
+  transition: .5s;
+}
