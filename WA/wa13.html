@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA 13</title>
+</head>
+<body>
+    
+    <script>
+        //Problem 1
+        const employeesData = [
+        {firstName: "Sam", department: "Tech", designation: "Manager", salary: 4000, raiseEligible: true},
+        {firstName: "Mary", department: "Finance", designation: "Trainee", salary: 18500, raiseEligible: true},
+        {firstName: "Bill", department: "HR", designation: "Executive", salary: 21200, raiseEligible: false}
+        ]
+        console.log("Problem 1", employeesData);
+
+        //Problem 2
+        const companyDetails = {
+            companyName: "Tech Stars", website: "www.techstars.site", employees: employeesData
+        };
+        console.log("Problem 2", companyDetails);
+
+        //Problem 3
+        const newEmployee = {
+            firstName: "Anna", department: "Tech", designation: "Executive", salary: 25600, raiseEligable: false
+        };
+        employeesData.push(newEmployee);
+        console.log ("Problem 3", employeesData);
+        
+        //Problem 4
+        function totalSalary(employeesData) {
+            let total = 0;
+            for (let i = 0; i < employeesData.length; i++){
+                total += employeesData[i].salary;
+            }
+            return total;
+        };
+        console.log ("Probelm 4", totalSalary(employeesData));
+
+        //Problem 5
+        //changes the original array values :(
+        function giveRaise(employeesData){
+            for (let i = 0; i < employeesData.length; i++){
+                if (employeesData[i].raiseEligible){
+                    employeesData[i].salary *= 1.1;
+                    employeesData[i].raiseEligible = false;
+                }
+            }
+            return employeesData;
+        }
+        console.log ("Problem 5", giveRaise(employeesData));
+
+        //Problem 6
+        const wfhEmployees = ['Anna', 'Sam'];
+        function setWFHstatus (employeesData, wfhList) {
+            for (let i = 0; i <employeesData.length; i++) {
+                employeesData[i].wfh = wfhList.includes(employeesData[i].firstName);
+            }
+            return employeesData;
+        }
+        console.log("Probelm 6", setWFHstatus(employeesData, wfhEmployees));
+    </script>
+</body>
+</html>
