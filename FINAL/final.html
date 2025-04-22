@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Falling Phone Number</title>
     <link rel="stylesheet" href="final.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Saira+Stencil+One&display=swap');
+        </style>
 </head>
 <body>
-    <div id="game-container">
-        <div id="phone-display">Phone: </div>
-        <div id="basket"></div>
-        <button id="clear-btn">Clear</button>
-        <button id="finish-btn">Is this your phone number?</button>
+    <div id="numberContainer">
+        <div id="phoneDisplay">Phone Number: </div>
+        <img id="basket" src="/IMG/basket.png" alt="caterpillar in a basket">
+        <button id="clearBut">Clear</button>
+        <button id="finishBut">Is this your phone number?</button>
     </div>
 
     <script>
-        const container = document.getElementById("game-container");
+        const container = document.getElementById("numberContainer");
         const basket = document.getElementById("basket");
-        const phoneDisplay = document.getElementById("phone-display");
-        const clearBtn = document.getElementById("clear-btn");
-        const finishBtn = document.getElementById("finish-btn");
+        const phoneDisplay = document.getElementById("phoneDisplay");
+        const clearBtn = document.getElementById("clearBut");
+        const finishBtn = document.getElementById("finishBut");
         let phoneNumber = "";
 
         container.addEventListener("mousemove", function(e) {
@@ -36,7 +39,7 @@
         function spawnNumber() {
             const number = Math.floor(Math.random() * 10);
             const div = document.createElement("div");
-            div.className = "falling-number";
+            div.className = "fallingNumber";
             div.textContent = number;
             div.style.left = Math.random() * (container.clientWidth - 20) + "px";
             div.style.top = "0px";
@@ -78,11 +81,11 @@
         clearBtn.addEventListener("click", function() {
             phoneNumber = "";
             phoneDisplay.textContent = "Phone: ";
-            finishBtn.style.display = "none";
+            finishBut.style.display = "none";
         });
 
-        finishBtn.addEventListener("click", function() {
-            alert("Congrats! Your phone number is: " + phoneNumber);
+        finishBut.addEventListener("click", function() {
+            alert("Yay! You found your phone number!");
         });
     </script>
 </body>

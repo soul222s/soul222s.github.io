@@ -1,41 +1,58 @@
-#game-container {
+.saira-stencil-one-regular {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bagel-fat-one-regular {
+    font-family: "Bagel Fat One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+#body {
+    font-family: "Bagel Fat One";
+}
+
+#numberContainer {
     position: relative;
     width: 90vw;
     height: 90vh;
-    border: 2px solid #000;
+    top: 20px;
+    border: 4px dotted #840c0c;
     overflow: hidden;
     margin: auto;
     background-color: #fefefe;
 }
 
 #basket {
-    width: 80px;
-    height: 40px;
-    background-color: brown;
+    width: 100px;
+    height: auto;
     position: absolute;
     bottom: 0;
     left: 160px;
-    border-radius: 10px;
+    pointer-events: none;
 }
 
-.falling-number {
+.fallingNumber {
     position: absolute;
     font-size: 24px;
     font-weight: bold;
     color: black;
+    background-image: url("/IMG/apple.");
 }
 
-#phone-display {
+#phoneDisplay {
     text-align: center;
     margin: 10px;
     font-size: 20px;
 }
 
-#clear-btn, #finish-btn {
+#clearBut, #finishBut {
     display: block;
     margin: 10px auto;
 }
 
-#finish-btn {
+#finishBut {
     display: none;
 }
