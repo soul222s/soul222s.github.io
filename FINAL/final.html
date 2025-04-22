@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Phone Number</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="phone-display">Phone: </div>
+        <div id="basket"></div>
+        <button id="clear-btn">Clear</button>
+        <button id="finish-btn">Is this your phone number?</button>
+    </div>
+
+    <script>
+        const container = document.getElementById("game-container");
+        const basket = document.getElementById("basket");
+        const phoneDisplay = document.getElementById("phone-display");
+        const clearBtn = document.getElementById("clear-btn");
+        const finishBtn = document.getElementById("finish-btn");
+        let phoneNumber = "";
+
+        container.addEventListener("mousemove", function(e) {
+         const rect = container.getBoundingClientRect();
+         const x = e.clientX - rect.left;
+         const basketWidth = basket.offsetWidth;
+         let newLeft = x - basketWidth / 2;
+
+         newLeft = Math.max(0, Math.min(container.clientWidth - basketWidth, newLeft));
+         basket.style.left = newLeft + "px";
+        });
+
+
+        function spawnNumber() {
+            const number = Math.floor(Math.random() * 10);
+            const div = document.createElement("div");
+            div.className = "falling-number";
+            div.textContent = number;
+            div.style.left = Math.random() * (container.clientWidth - 20) + "px";
+            div.style.top = "0px";
+            container.appendChild(div);
+
+            let top = 0;
+            const fallInterval = setInterval(function() {
+                top += 5;
+                div.style.top = top + "px";
+
+                const basketRect = basket.getBoundingClientRect();
+                const numberRect = div.getBoundingClientRect();
+
+                if (
+                    top > container.clientHeight - 60 &&
+                    numberRect.left < basketRect.right &&
+                    numberRect.right > basketRect.left
+                ) {
+                    if (phoneNumber.length < 10) {
+                        phoneNumber += number;
+                        phoneDisplay.textContent = "Phone: " + phoneNumber;
+                        if (phoneNumber.length === 10) {
+                            finishBtn.style.display = "block";
+                        }
+                    }
+                    container.removeChild(div);
+                    clearInterval(fallInterval);
+                }
+
+                if (top > container.clientHeight) {
+                    container.removeChild(div);
+                    clearInterval(fallInterval);
+                }
+            }, 50);
+        }
+
+        setInterval(spawnNumber, 1000);
+
+        clearBtn.addEventListener("click", function() {
+            phoneNumber = "";
+            phoneDisplay.textContent = "Phone: ";
+            finishBtn.style.display = "none";
+        });
+
+        finishBtn.addEventListener("click", function() {
+            alert("Congrats! Your phone number is: " + phoneNumber);
+        });
+    </script>
+</body>
+</html>
