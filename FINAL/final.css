@@ -9,6 +9,10 @@
     font-weight: 400;
     font-style: normal;
 }
+
+html {
+    font-family: 'Bagel Fat One', 'Saira Stencil One';
+}
   
 #body {
     font-family: "Bagel Fat One";
@@ -22,7 +26,6 @@
     border: 4px dotted #840c0c;
     overflow: hidden;
     margin: auto;
-    background-color: #fefefe;
 }
 
 #basket {
@@ -36,23 +39,64 @@
 
 .fallingNumber {
     position: absolute;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    color: black;
-    background-image: url("/IMG/apple.");
+    color: white;
+    font-family: 'Bagel Fat One', 'Saira Stencil One';
+    pointer-events: none;
+    user-select: none;
+    background-image: url("/IMG/apple.PNG"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    z-index: 1;
 }
 
 #phoneDisplay {
     text-align: center;
     margin: 10px;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 #clearBut, #finishBut {
     display: block;
     margin: 10px auto;
+    background-color: rgb(21, 84, 21);
+    color: rgb(255, 255, 104);
+    border: none;
+    font-family: 'Bagel Fat One';
+    text-align: center;
+    border-radius: 12px;
+    z-index: 3;
+}
+
+#clearBut {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
 }
 
 #finishBut {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
     display: none;
 }
+
+#clearBut:hover {
+    background-color: lightgreen;
+    color: rgb(21, 84, 21);
+    transition: .5s;
+  }
+
+  #finishBut:hover {
+    background-color: lightgreen;
+    color: rgb(21, 84, 21);
+    transition: .5s;
+  }
+
+
