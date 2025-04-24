@@ -26,6 +26,10 @@ html {
     border: 4px dotted #840c0c;
     overflow: hidden;
     margin: auto;
+    background-image: url("/IMG/appletree.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
 }
 
 #basket {
