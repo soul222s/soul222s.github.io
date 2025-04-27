@@ -1,92 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Falling Phone Number</title>
-    <link rel="stylesheet" href="final.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Saira+Stencil+One&display=swap');
-        </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falling Phone Number</title>
+  <link rel="stylesheet" href="final.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Saira+Stencil+One&display=swap');
+  </style>
 </head>
 <body>
-    <div id="numberContainer">
-        <div id="phoneDisplay">Phone Number: </div>
-        <img id="basket" src="/IMG/basket.png" alt="caterpillar in a basket">
-        <button id="clearBut">Clear</button>
-        <button id="finishBut">Is this your phone number?</button>
-    </div>
 
-    <script>
-        const container = document.getElementById("numberContainer");
-        const basket = document.getElementById("basket");
-        const phoneDisplay = document.getElementById("phoneDisplay");
-        const clearBtn = document.getElementById("clearBut");
-        const finishBtn = document.getElementById("finishBut");
-        let phoneNumber = "";
+  <div id="numberContainer">
+    <div id="phoneDisplay">Phone Number: </div>
+    <img id="basket" src="/IMG/basket.png" alt="caterpillar in a basket">
+    <button id="clearBut">Clear</button>
+    <button id="finishBut">Is this your phone number?</button>
+  </div>
 
-        container.addEventListener("mousemove", function(e) {
-         const rect = container.getBoundingClientRect();
-         const x = e.clientX - rect.left;
-         const basketWidth = basket.offsetWidth;
-         let newLeft = x - basketWidth / 2;
+  <script>
+    const container = document.getElementById("numberContainer");
+    const basket = document.getElementById("basket");
+    const phoneDisplay = document.getElementById("phoneDisplay");
+    const clearBtn = document.getElementById("clearBut");
+    const finishBtn = document.getElementById("finishBut");
 
-         newLeft = Math.max(0, Math.min(container.clientWidth - basketWidth, newLeft));
-         basket.style.left = newLeft + "px";
-        });
+    let phoneNumber = "";
 
+    container.addEventListener("mousemove", (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const basketWidth = basket.offsetWidth;
+      let newLeft = x - basketWidth / 2;
 
-        function spawnNumber() {
-            const number = Math.floor(Math.random() * 10);
-            const div = document.createElement("div");
-            div.className = "fallingNumber";
-            div.textContent = number;
-            div.style.left = Math.random() * (container.clientWidth - 20) + "px";
-            div.style.top = "0px";
-            container.appendChild(div);
+      newLeft = Math.max(0, Math.min(container.clientWidth - basketWidth, newLeft));
+      basket.style.left = `${newLeft}px`;
+    });
 
-            let top = 0;
-            const fallInterval = setInterval(function() {
-                top += 5;
-                div.style.top = top + "px";
+    function spawnNumber() {
+      const number = Math.floor(Math.random() * 10);
+      const div = document.createElement("div");
 
-                const basketRect = basket.getBoundingClientRect();
-                const numberRect = div.getBoundingClientRect();
+      div.className = "fallingNumber";
+      div.textContent = number;
+      div.style.left = `${Math.random() * (container.clientWidth - 20)}px`;
+      div.style.top = "0px";
+      container.appendChild(div);
 
-                if (
-                    top > container.clientHeight - 60 &&
-                    numberRect.left < basketRect.right &&
-                    numberRect.right > basketRect.left
-                ) {
-                    if (phoneNumber.length < 10) {
-                        phoneNumber += number;
-                        phoneDisplay.textContent = "Phone: " + phoneNumber;
-                        if (phoneNumber.length === 10) {
-                            finishBtn.style.display = "block";
-                        }
-                    }
-                    container.removeChild(div);
-                    clearInterval(fallInterval);
-                }
+      let top = 0;
+      const fallInterval = setInterval(() => {
+        top += 5;
+        div.style.top = `${top}px`;
 
-                if (top > container.clientHeight) {
-                    container.removeChild(div);
-                    clearInterval(fallInterval);
-                }
-            }, 50);
+        const basketRect = basket.getBoundingClientRect();
+        const numberRect = div.getBoundingClientRect();
+
+        if (
+          top > container.clientHeight - 60 &&
+          numberRect.left < basketRect.right &&
+          numberRect.right > basketRect.left
+        ) {
+          if (phoneNumber.length < 10) {
+            phoneNumber += number;
+            phoneDisplay.textContent = `Phone: ${phoneNumber}`;
+            if (phoneNumber.length === 10) {
+              finishBtn.style.display = "block";
+            }
+          }
+          container.removeChild(div);
+          clearInterval(fallInterval);
         }
 
-        setInterval(spawnNumber, 1000);
+        if (top > container.clientHeight) {
+          container.removeChild(div);
+          clearInterval(fallInterval);
+        }
+      }, 50);
+    }
 
-        clearBtn.addEventListener("click", function() {
-            phoneNumber = "";
-            phoneDisplay.textContent = "Phone: ";
-            finishBut.style.display = "none";
-        });
+    setInterval(spawnNumber, 1000);
 
-        finishBut.addEventListener("click", function() {
-            alert("Yay! You found your phone number!");
-        });
-    </script>
+    clearBtn.addEventListener("click", () => {
+      phoneNumber = "";
+      phoneDisplay.textContent = "Phone: ";
+      finishBut.style.display = "none";
+    });
+
+    finishBut.addEventListener("click", () => {
+      alert("Yay! You found your phone number!");
+    });
+  </script>
+
 </body>
 </html>

@@ -12,6 +12,7 @@
 
 html {
     font-family: 'Bagel Fat One', 'Saira Stencil One';
+    background-color: rgb(21, 84, 21);
 }
   
 #body {
@@ -23,10 +24,10 @@ html {
     width: 90vw;
     height: 90vh;
     top: 20px;
-    border: 4px dotted #840c0c;
+    border: 8px solid #840c0c;
     overflow: hidden;
     margin: auto;
-    background-image: url("/IMG/appletree.jpg");
+    background-image: url("/IMG/appletrees.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
@@ -64,6 +65,7 @@ html {
     text-align: center;
     margin: 10px;
     font-size: 40px;
+    color: rgb(255, 255, 104);
 }
 
 #clearBut, #finishBut {
