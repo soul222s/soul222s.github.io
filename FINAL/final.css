@@ -17,7 +17,7 @@
   }  
 
 html {
-    font-family: 'Bagel Fat One', 'Saira Stencil One';
+    font-family: 'Barrio';
     background-color: rgb(21, 84, 21);
 }
   
@@ -51,9 +51,8 @@ html {
 .fallingNumber {
     position: absolute;
     font-size: 20px;
-    font-weight: bold;
     color: white;
-    font-family: 'Baria';
+    font-family: 'Barrio';
     pointer-events: none;
     user-select: none;
     background-image: url("/IMG/apple.PNG"); 

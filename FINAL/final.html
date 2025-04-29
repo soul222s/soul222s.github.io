@@ -50,17 +50,19 @@
 
       let top = 0;
       const fallInterval = setInterval(() => {
-        top += 5;
+        top += 7;
         div.style.top = `${top}px`;
 
         const basketRect = basket.getBoundingClientRect();
         const numberRect = div.getBoundingClientRect();
 
-        if (
-          top > container.clientHeight - 60 &&
-          numberRect.left < basketRect.right &&
-          numberRect.right > basketRect.left
-        ) {
+        const basketMidpoint = basketRect.top + basketRect.height / 2;
+
+      if (
+        numberRect.bottom >= basketMidpoint &&
+        numberRect.left < basketRect.right &&
+        numberRect.right > basketRect.left
+        ){
           if (phoneNumber.length < 10) {
             phoneNumber += number;
             phoneDisplay.textContent = `Phone: ${phoneNumber}`;
